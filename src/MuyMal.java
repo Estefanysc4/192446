@@ -2,16 +2,14 @@ import java.util.Scanner;
 
 public class MuyMal {
     public static void main(String[] args) throws Exception {
-        Scanner o = new Scanner(System.in);
-
+        Scanner input = new Scanner(System.in);
+        System.out.println("Ingrese un número límite:");
+        int L = input.nextInt();
         int i = 1;
         int T = 0;
         int M = 0;
         int N = 0;
-
-        System.out.println("Ingrese un número límite:");
-        int L = o.nextInt();
-
+        
         while (i <= L) {
             if (i % 3 == 0) {
                 T = T + i;
@@ -30,9 +28,9 @@ public class MuyMal {
 
             i = i + 1;
         }
-
         System.out.println("Suma de múltiplos de 3: " + T);
         System.out.println("Suma de múltiplos de 5: " + M);
         System.out.println("Suma del resto: " + N);
+        input.close();
     }
 }
